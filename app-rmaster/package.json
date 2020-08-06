@@ -10,10 +10,13 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "validator": "^13.1.1",
     "vee-validate": "^3.3.8",
     "vue": "^2.6.11",
+    "vue-ctk-date-time-picker": "^2.5.0",
     "vue-router": "^3.3.4",
-    "vuetify": "^2.2.11"
+    "vuetify": "^2.2.11",
+    "vuetify-datetime-picker": "^2.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

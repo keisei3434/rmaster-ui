@@ -2,9 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
+import DatetimePicker from 'vuetify-datetime-picker'
 
 import { extend, localize } from 'vee-validate'
 import ja from 'vee-validate/dist/locale/ja'
+import isURL from 'validator/es/lib/isURL';
 import * as rules from 'vee-validate/dist/rules'
 
 for (const rule in rules) {
@@ -18,9 +20,18 @@ const isHiragana = {
 };
 extend('isHiragana', isHiragana);
 
+const isURLFromValidator = {
+  message: field => field + ' はURLを入力してください',
+  validate: value => isURL(value, { require_protocol: true })
+}
+
+extend('isURL', isURLFromValidator);
+
 localize('ja', ja)
 
 Vue.config.productionTip = false
+
+Vue.use(DatetimePicker)
 
 new Vue({
   router,

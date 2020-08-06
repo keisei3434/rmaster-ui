@@ -69,7 +69,7 @@
               :error-messages="errors"
             ></v-text-field>
           </ValidationProvider>
-          <ValidationProvider name="Link" rules="url|max:1000" v-slot="{ errors }">
+          <ValidationProvider name="Link" rules="isURL|max:1000" v-slot="{ errors }">
             <v-text-field
               :counter="1000"
               single-line

@@ -69,7 +69,7 @@
               :counter="25"
               single-line
               v-model="user.name"
-              label="名前*"
+              label="名前 *"
               :error-messages="errors"
             ></v-text-field>
           </ValidationProvider>
@@ -78,7 +78,7 @@
               :counter="25"
               single-line
               v-model="user.name_kana"
-              label="名前(かな)*"
+              label="名前(かな) *"
               :error-messages="errors"
             ></v-text-field>
           </ValidationProvider>
